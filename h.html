@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldclock withmistakes</title>
+    <style>
+        h1{
+            background-color:darkgreen;
+            text-align: center;
+            border-color: 6px solid red;
+            font-size: 1cm;
+        }
+        body{
+            background-color: gold;
+            text-align: center;
+            font-size: 2 cm;
+
+        }
+        #ban{
+            font-size: 1cm;
+        }
+    </style>
+</head>
+<body><h1>It is my first project so there is a mistake here.hope you will forgive it</h1>
+    <script lang="javascript">
+        function time(){
+            var a = new Date()
+            var h = a.getHours()
+            var m = a.getMinutes()
+            var s = a.getSeconds()
+            var p="PM"
+            if (h<0){
+                if (h>24){
+                    h=h-24
+                }
+                
+                h=h+10};
+            if (m<0){m=m+10}
+            if (s<0){s=s+10}
+            var t = h+":"+m+":"+s+""+p
+            document.getElementById("hi").innerHTML=t
+
+            
+        }
+        window.setInterval(time,1000)
+        function t2(){
+            var a = new Date()
+            var h = (a.getHours()-11)
+            var m = a.getMinutes()
+            var s = a.getSeconds()
+            if (h<0){h=h+10}
+            if (m<0){m=m+10}
+            if (s<0){s=s+10}
+            var t = h+":"+m+":"+s
+            document.getElementById("America").innerHTML=t
+
+            
+        }
+        window.setInterval(t2,1000)
+        function t3(){
+            var a = new Date()
+            var h = (a.getHours()-23)
+            var m = a.getMinutes()
+            var s = a.getSeconds()
+            if (h<0){
+                if (h>24){
+                    h=h-24
+                }
+                h=h+10}
+            if (m<0){m=m+10}
+            if (s<0){s=s+10}
+            var t = h+":"+m+":"+s
+            document.getElementById("aus").innerHTML=t
+
+            
+        }
+        window.setInterval(t3,1000)
+        function t4(){
+            var a = new Date()
+            var h = (a.getHours()-21)
+            var m = a.getMinutes()
+            var s = a.getSeconds()
+            if (h<0){h=h+10}
+            if (m<0){m=m+10}
+            if (s<0){s=s+10}
+            var t = h+":"+m+":"+s
+            document.getElementById("new").innerHTML=t
+
+            
+        }
+        window.setInterval(t4,1000)
+        function t5(){
+            var a = new Date()
+            var h = (a.getHours()-1)
+            var m = (a.getMinutes()+27)
+            var s = a.getSeconds()
+            if (h<0){h=h+10};
+            if (m<0){m=m+10}
+            if (s<0){s=s+10}
+            var t = h+":"+m+":"+s
+            document.getElementById("in").innerHTML=t
+
+            
+        }
+        window.setInterval(t5,1000)
+        function t6(){
+            var a = new Date()
+            var h = (a.getHours()-1)
+            var m = (a.getMinutes()-30)
+            var s = a.getSeconds()
+            if (h<0){h=h+10}
+            if (m<0){m=m+10}
+            if (s<0){s=s+10}
+            var t = h+":"+m+":"+s
+            document.getElementById("af").innerHTML=t
+
+            
+        }
+        window.setInterval(t6,1000)
+
+
+        
+    </script>
+    <div>
+        <tr>
+            <div id="America"></div>
+            <td>America</td>
+        </tr>
+        <tr>
+            <div id="hi"></div>
+            <td>Bangladesh</td>
+            
+        </tr>
+        <tr>
+            <div id="aus"></div>
+            <td>Australia</td>
+            <div id="new"></div>
+            <td>New Zeland</td>
+            
+        </tr>
+        <tr>
+            <div id="in"></div>
+            <td>India</td>
+            <div id="af"></div>
+            <td>Afganistan</td>
+            
+        </tr>
+    </div>
+</body>
+</html>
